@@ -77,3 +77,6 @@ function square (number) {
 
 let number = square (2);
 console.log(number);
+
+//this is a new part from freecode camp
+
