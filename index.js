@@ -127,23 +127,174 @@ let waldAnimals = ['lion', 'elephant', 'tiger'];
 waldAnimals[1] = 'giraffe';
 console.log(waldAnimals);
 
+//this part is special method for an array manipulatipon
+//we learnt 6 things
+//The push() - this is to add an item to the end of an array
+//2. is the pop()- to remove an item from the end of the array
+//3.unshift()- add item from the array at index 0
+//4.shift()- remove an item from the array at index 0
+//5. indexof()- can be used to find and return the index of an item in the array
+//6. Lenght - this is to get the size of an array.
 
+//This part is Exercise #4
+let animals = ['Owl', 'Eagle'];
 
+birds.push('Sparrow');
 
+console.log(birds);
 
+//the exercise
+//1.add balck
+let colors =['red', 'green', 'blue'];
+colors.push('black');
 
+console.log(colors);
 
+//2.remove red
+colors.shift();
+console.log(colors);
 
+//3.swap the position of green and blue
+let temp = colors[0];
+colors[0] = colors[1];
+colors[1] = temp;
+console.log(colors);
 
+//4.add color yellow at first index of array
+colors.unshift('yellow');
+console.log(colors);
 
+//This is part 11 that is. CONTROL FLOW (conditional)
+//there are two types of control flow and they are 
+//1. if...else statement and 2. switch..case statement.
+//1. allows you to create a program that runs only if a specific condition is met. example;
+let balance = 8000;
+if (balance > 6000) {
+    console.log ("i have the money foe this trip, i have to go!");
+}
+//after if ststement, you can write another line of code
+console.log("The end!");
 
+//now change balance to 3000
+// let balance = 3000;
+// if (balance > 6000) {
+    console.log ("i cant i need to stay and save more for next time!");
+//}
 
+//this is using  the else statement (you will continue this from the currey brcaket from the if statement)
+let have = 7000;
+if (have > 5000) {
+    console.log("i have got enough money so i will go");
+} else {
+    console.log("sorry, not enough for your expenses. save more!");
+}
+console.log("The End!");
 
+//this is the switch case statement.
+let age = 18;
+switch (age) {
+    case 10:
+        console.log ("Age is 10");
+        
+        break;
+        case 15:
+            console.log("Age is 15");
 
+            break;
+            default:
+            console.log ("age is neither 10 or 15");
+}
 
+//#exercise5 for the cotrol flows in js.
+//A primary school is giving different rewards based on the student's grade:
+//Students that got an A will get a Chocolate
+//Students that got a B will get a Cookie
+//students that got a C will get a Candy
+//For any other value, print "No reward to give."
+//Create a variable named grade that will store the student's grade.
 
+let grades = ['A', 'B', 'C']; //an array of all grades
 
+for (let grade of grades) {
+    switch (grade) {
+        case 'A':
+            console.log("you got an A, so have a chocolate!");
+            break;
 
+            case 'B':
+                console.log("you got a B, so have a cookie!");
+                break;
+
+                case 'C':
+                    console.log("you got a C, there's room for improvement, have a candy!");
+                     break;
+
+                    default:
+                        console.log("No reward to give!");
+    }
+}
+//note better: in JS letters must be in quote in parentheses when they are text (they are called STRING)
+//you will need to loop the letters after you have put them in arrays.
+//However if they are numbers you leave it like that.#
+
+//here we are on the control flow (loops)in J.S
+//here, we have the for and the while loop.
+//for the loop, we have 3 things, increasing the no, decreasing the no, and doubling the numbers
+//Example1; printing numbers from 1 to 5
+for (let i = 1; i <= 5; i++) {
+    console.log (i);
+} //when i put the > just that it did not work until i change the sign and added = sign
+
+//example 2; count backward (decrement)
+for (let x = 5; x > 0; x--) {
+    console.log (x);
+}
+
+//example3; doubling how much it increased
+for (let i = 0; i < 10; i += 2) {
+    console.log (i);
+}
+
+//this is an #Exercise 6
+//Write a program that prints a half pyramid using asterisks *
+//step 1.
+for (let  i= 1; i <= 5; i++) {
+    console.log('*' .repeat(i));
+}
+
+//empty line between
+console.log("");
+
+//step 2. reverse pyramid.
+for (let i = 5; i >= 1; i--) {
+    console.log ('*' .repeat(i));
+}
+
+//we are moving on to functions in J.S
+//write the code to distribute: Hello, Peter! nice weather today right?
+function greet(name , waether) {
+    console.log('Hello, ${name}!');
+    console.log('Nice ${weather} today right?');
+}
+greet ("Peter" , "weather");
+
+//leaving space in between
+console.log("");
+
+//example2
+function greet(name, weather) {
+  console.log(`Hello, ${name}!`);
+  console.log(`It's ${weather} today, right?`);
+}
+
+greet("Nathan", "rainy");
+
+//We on default parameters now.
+//this is about calling a function wiouth having to call an argument.
+function greet(name = "God") {
+    console.log('Hello, ${name}!');
+    console.log("Nice weather today right");
+}
 
 //for the name in js it (1)cannot be a reserved keyword, 
 // that is why the let is showing red, making it undefined,
