@@ -296,6 +296,57 @@ function greet(name = "God") {
     console.log("Nice weather today right");
 }
 
+//line between
+console.log("");
+//Here's another example of a function that has 
+// one default parameter called name and one 
+// non-default parameter called weather:
+function greet(weather, name = "Nathan") {
+  console.log(`Hello, ${name}!`);
+  console.log(`It's ${weather} today, right?`);
+}
+
+greet("sunny");
+
+//Exercise #7
+//Write a function named calculateSquare() 
+// that's used to calculate the area and perimeter 
+// of a square shape. The formula to calculate the area is side * side, and the formula to calculate the perimeter is 4 * side.
+//The output shows the size of the size, the area, 
+// and the perimeter
+const calculateSquare = (side) => {
+  const area = side * side;
+  const perimeter = 4 * side;
+  console.log(`Side: ${side}`);
+  console.log(`Area: ${area}`);
+  console.log(`Perimeter: ${perimeter}`);
+};
+// call the function here 
+calculateSquare(5);
+
+//this is objects in java script.
+//Exercise #8
+//Exercise #8
+//Create a person object with the following properties:
+//name - the person's name
+//age - the person's age
+//greet() - a function to greet another person
+//Inside the greet() function, introduce the person, specifying the name and the age.
+let person = {
+  name: "Alex",
+  age: 22,
+  greet: function () {
+    console.log(`Hello! My name is ${this.name} and I'm ${this.age} years old.`);
+  }
+};
+
+person.greet();
+
+
+
+
+
+
 //for the name in js it (1)cannot be a reserved keyword, 
 // that is why the let is showing red, making it undefined,
 //not only let like, if, else. (2)it should be a meaningful and 
